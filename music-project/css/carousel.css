@@ -1,0 +1,83 @@
+        /* .carousel-container{
+            background: rgb(44, 44, 44)
+        } */
+        .carousel {
+            margin-top: 60px;
+            width: 1000px;
+            height: 340px;
+            overflow: hidden;
+            position: relative;
+            background: rgb(44, 44, 44);
+            cursor: pointer;
+        }
+        
+        .carousel-img {
+            position: absolute;
+            width: 4000px;
+            /*left: -300px;*/
+            /*开始便显示第一张图片*/
+        }
+        
+        .carousel-img li {
+            float: left;
+        }
+        /* .carousel-img li:first-child{
+            background: red
+        } */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .carousel-img img {
+            width: 1000px;
+            height: 340px;
+        }
+        
+        .carousel .button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid;
+            text-align: center;
+            margin-top: -15px;
+            /*绝对定位之后负margin居中，值为元素高度的一半*/
+            line-height: 30px;
+            /*使元素行内居中*/
+            text-decoration: none;
+            position: absolute;
+            top: 50%;
+            color: #fff;
+            background: grey;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+        
+        .carousel .pre {
+            left: 10px;
+        }
+        
+        .carousel .next {
+            right: 10px;
+        }
+        
+        .carousel .pane {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translate(-50%)
+        }
+        
+        .carousel .pane li {
+            float: left;
+            width: 20px;
+            height: 5px;
+            margin: 2px;
+            border-radius: 4px;
+            background: #ccc;
+            cursor: pointer;
+        }
+        
+        .carousel .pane .active {
+            background: #fff;
+        }

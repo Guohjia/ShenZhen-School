@@ -1,0 +1,60 @@
+        .nav{
+             background: rgb(44, 44, 44);
+             position: relative;
+             /* transition: opacity .5s linear */
+        }
+        .nav-svg{
+            position: absolute;
+            left:7%;
+            /* transform: translate(0,-50%); */
+            animation: navSvg 1s linear infinite;
+        }
+        .nav-item li{
+            float: left;
+            padding: 20px 15px;
+            /* cursor: pointer; */
+            /* margin:1% 0; */
+        }
+        .nav-item .active{
+            background: linear-gradient(to bottom,rgb(44, 44, 44),rgb(52, 52, 52),gray)
+        }
+        .nav-item li:first-child{
+            margin-left: 18%
+        }
+        .nav .search{
+            min-width:270px;
+            padding: 0;
+            position: absolute;
+            right: 3%;
+            top:50%;
+            transform: translate(0,-50%); 
+        }
+        .nav .search svg{
+            position: absolute;
+             left:-15%; 
+            top:50%;
+            transform: translate(0,-50%)
+        }
+        .nav .search input{
+            outline: none;
+            padding-left: 10px;
+            border-radius: 8px;
+            width: 200px;
+            height: 28px; 
+            margin-right: 12px;
+        }
+        .nav .search>span a:hover{
+            color:#B50B0B
+        }
+
+        @keyframes navSvg{
+            0%{
+                transform: scale(1)
+            }
+            50%{
+                transform: scale(1.2)
+            }
+            100%{
+                transform: scale(1)
+            }
+        }
