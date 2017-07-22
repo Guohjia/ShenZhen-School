@@ -49,7 +49,7 @@ class Carousel {
 
                 this.pane.on('click', 'li', function (e) {
                     _this.StopAuto();
-                    var distance = ($(this).index() - _this.pane.find('li').index($('.active'))) * _this.firstImg.width();
+                    var distance = ($(this).index() - _this.pane.find('li').index($('.pane>.active'))) * _this.firstImg.width();
                     _this.carouselImg.animate({
                         left: '-=' + distance + 'px'
                     })

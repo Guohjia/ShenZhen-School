@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hot-recommend</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div id="recommend">
+		<div id="hot_nav">
+			<span><a>更多</a><img src="images/jiantou.png" alt=""></span>
+			<div>
+				<span></span>
+				<a href="#">热门推荐</a>
+			</div>
+			<ul class="clearfix">
+				<li><a href="#">华语</a><span class="line">|</span></li>
+				<li><a href="#">流行</a><span class="line">|</span></li>
+				<li><a href="#">摇滚</a><span class="line">|</span></li>
+				<li><a href="#">民谣</a><span class="line">|</span></li>
+				<li><a href="#">电子</a></li>
+			</ul>
+			<hr>
+		</div>
+		<div id="hot_music">
+			<ul>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+				<li>
+					<div>
+						<img src="" alt="">
+						<div class="up_img">
+							<span></span>
+						</div>
+					</div>
+					<a href="#"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+	function id(ID) {
+		return document.getElementById(ID);
+	}
+	function tag(name, father) {
+		father = father || document;
+		return father.getElementsByTagName(name);
+	}
+	var liImgs = tag('img', id('hot_music'));
+	var lias = tag('a', id('hot_music'));
+	var spans = tag('span', id('hot_music'));
+	// var hot_music=[
+	// 	{ImgSrc:'images/p1.jpg',content:'【有一种喜剧叫做周星驰】星爷电影配乐精选',number:'55万'},
+	// 	{ImgSrc:'images/p2.jpg',content:'韩系蓝调小酒馆，沁入耳膜般温柔',number:'25868'},
+	// 	{ImgSrc:'images/p3.jpg',content:'古风情调，醉美对吟',number:'69万'},
+	// 	{ImgSrc:'images/p4.jpg',content:'夏虫不语冰，愿有人能陪你走过四季',number:'36942'},
+	// 	{ImgSrc:'images/p5.jpg',content:'【去红馆听一场泪流满面的粤语盛宴】',number:'28万'},
+	// 	{ImgSrc:'images/p6.jpg',content:'〖流行〗ACG，就该是这个感觉',number:'34万'},
+	// 	{ImgSrc:'images/p7.jpg',content:'假装活在1997 (日语篇）',number:'36874'},
+	// 	{ImgSrc:'images/p8.jpg',content:'华语女生 清新俏皮的英文歌',number:'80万'}
+	// ];
+	function setData(hot_music) {
+		for (var i = 0; i < liImgs.length; i++) {
+			liImgs[i].setAttribute('src', hot_music[i].ImgSrc);
+		}
+		for (var i = 0; i < lias.length; i++) {
+			lias[i].innerText = hot_music[i].content;
+		}
+		for (var i = 0; i < spans.length; i++) {
+			spans[i].innerText = hot_music[i].number;
+		}
+
+	}
+	
+	window.onmessage = function (e) {
+		var getData=JSON.parse(e.data)
+		setData(getData)
+	}
+</script>
+
+</html>

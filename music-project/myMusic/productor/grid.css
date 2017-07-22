@@ -1,0 +1,138 @@
+@font-face{
+			font-family:"myFont";
+			font-size:normal;
+			font-weight:normal;
+			src:url('fonts/raphaelicons-webfont.eot') format('eot'),
+				url('fonts/raphaelicons-webfont.svg') format('svg'),
+				url('fonts/raphaelicons-webfont.ttf') format('truetype'),
+				url('fonts/raphaelicons-webfont.woff') format('woff');
+		}
+
+*{padding:0;margin:0;}
+ul{list-style:none;}
+table{
+	border-collapse:collapse;
+	box-shadow:5px 5px 10px 1px red;
+	width: 100%;
+}
+table td,table th{
+	padding:5px 10px;
+}
+table,table td,table th{
+	border:1px solid red;
+	text-align: center;
+}
+table caption{
+	height:30px;line-height:30px;
+	text-align:left;
+	padding-left:20px;color:white;
+	background-color:red;
+}
+table caption>a{
+	float:right;
+	margin-right:20px;
+	color:white;
+}
+#overlay{
+	position:absolute;
+	width:100%;height:100%;
+	left:0;top:0;
+	display:none;
+	background:rgba(0,0,0,.5);
+	perspective:800px;
+}
+#content{
+	background-color:white;
+	padding:50px 100px;
+	position:absolute;
+	left:50%;top:50%;
+	transform:translateX(-50%) translateY(-50%) rotateY(-90deg);
+	background-image: url(../images/2.jpg);
+	opacity: 0.3;
+}
+#content .title{
+	position:absolute;top:0;left:0;
+	width:100%;height:60px;
+}
+#content .title>h1{
+	background-color:red;
+	text-align:center;
+	color:white;height:100%;
+	line-height:60px;
+}
+#content .title>span,#span3{
+	border:1px solid white;
+	position:absolute;
+	right:10px;top:50%;
+	color:white;width:36px;
+	height:36px;border-radius:18px;
+	font-size:25px;
+	line-height:36px;
+	text-align:center;
+	transform:translateY(-50%);
+	cursor:pointer;
+}
+ul{margin-top:60px;}
+ul li{
+	padding-top:8px;padding-bottom:8px;}
+ul li:last-child{text-align:center;}
+#content label{
+	width:80px;display:inline-block;
+}
+#content input,#content select{
+	height:30px;text-indent:1em;width:200px;
+	/*border:1px solid black;*/
+}
+#content input.btn{
+	width:80px;
+	text-indent: 0;
+	background-color:red;
+	color:black;
+}
+#mmp{
+	width: 100%;
+	
+	background-color: white;
+	position: absolute;
+	top:0;left: 0;
+	opacity: 0.5;
+}
+#mmp h1{
+	height: 50px;line-height: 50px;
+    text-align: center;
+    opacity: 1;
+
+}
+.show,.hide{
+	animation-duration:0.6s;
+	animation-timing-function:linear;
+	animation-fill-mode:forwards;
+}
+.show{animation-name:show;}
+.hide{animation-name:hide;}
+@keyframes show{
+	from{
+		opacity:0;
+		transform:translateX(-50%) translateY(-50%) rotateY(-90deg);
+	}
+	to{
+		opacity:1;
+		transform:translateX(-50%) translateY(-50%) rotateY(0deg);
+	}
+}
+@keyframes hide{
+	from{
+		opacity:1;
+		transform:translateX(-50%) translateY(-50%) rotateY(0deg);
+	}
+	to{
+		opacity:0;
+		transform:translateX(-50%) translateY(-50%) rotateY(-90deg);
+	}
+}
+input{
+	opacity: 0.5;
+}
+select{
+	opacity: 0.5
+}

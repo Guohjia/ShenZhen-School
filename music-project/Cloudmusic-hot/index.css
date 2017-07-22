@@ -1,0 +1,106 @@
+ *{margin:0;padding: 0;}
+ ul{list-style: none;}
+ a{text-decoration:none;}
+ html,body{width: 100%;}
+#recommend{
+	width: 1000px;
+	margin:0 auto;
+}
+#recommend>#hot_nav{}
+#recommend>#hot_nav>span{	
+	float: right;
+	margin-top: 20px;
+	margin-right: 5px;
+	font-size: 15px;
+	color:rgb(102,102,102);
+}
+
+#recommend>#hot_nav>div>span{
+	float: left;
+	margin:20px 10px 10px 10px;
+	width: 5px;height: 5px;
+	border:5px solid rgb(193,13,12);
+	border-radius:50% 50%;
+}
+#recommend>#hot_nav>div>a{
+	display: inline-block;
+	float: left;
+	margin-right:10px;
+	margin-top: 14px;
+	font-size: 20px;
+	color:rgb(51,51,51);
+}
+#recommend>#hot_nav>ul{}
+#recommend>#hot_nav>ul.clearfix::after{
+	content:'';
+	display:block;
+	clear: both;
+}
+#recommend>#hot_nav>ul>li{
+	margin-top:18px;
+	float: left;
+}
+#recommend>#hot_nav>ul>li>a{
+	color:rgb(102,102,102);
+	font-size: 15px;
+	margin:0 15px;
+}
+#recommend>#hot_nav>span>a:hover,#recommend>#hot_nav>ul>li>a:hover{text-decoration: underline;}
+#recommend>#hot_nav .line{
+	font-size:12px;
+	color:rgb(204,204,204);
+}
+#recommend>#hot_nav>hr{
+	margin-top: 10px;
+	border:1px solid rgb(193,13,12);
+}
+/**/
+#recommend>#hot_music{}
+#recommend>#hot_music>ul{}
+#recommend>#hot_music>ul>li{
+	width: 140px;height: 140px;
+	float: left;
+	margin:20px 52px 80px 52px;
+}
+#recommend>#hot_music>ul>li>div{
+	position: relative;
+}
+#recommend>#hot_music>ul>li>div>img{
+	width: 140px;height: 140px;
+	border:1px solid rgb(204,204,204);
+}
+#recommend>#hot_music>ul>li>div>.up_img{
+	height: 28px;width: 100%;
+	position: absolute;
+	bottom: 4px;
+	background-color: rgba(0,0,0,0.4);
+}
+#recommend>#hot_music>ul>li>div>.up_img::before{
+	content:'';
+	width: 15px;height: 15px;
+	margin:2px 5px ;
+	background-size: 100% 100%;
+	background-image: url('images/listen.png');
+	position:absolute;
+	top:2px;left:5px;
+}
+#recommend>#hot_music>ul>li>div>.up_img::after{
+	content:'';
+	width: 20px;height: 20px;
+	background-size: 100% 100%;
+	background-image: url('images/on.png');
+	position:absolute;
+	top:2px;right:10px;
+	cursor: pointer;
+}
+#recommend>#hot_music>ul>li>div>.up_img>span{
+	color:rgb(200,200,200);
+	font-size:12px;
+	margin-left: 32px;
+}
+#recommend>#hot_music>ul>li>a{
+	font-size: 14px;
+	color:#000;
+}
+#recommend>#hot_music>ul>li>a:hover{text-decoration: underline;}
+
