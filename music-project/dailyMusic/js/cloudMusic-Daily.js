@@ -64,27 +64,24 @@ function collHover(){
 		// }
 		(function(i){
 			colls[i].onclick=function(){
-				if(index){
-					this.src='images/like.png';
-					index=false;
-				}else{
-					this.src='images/notlike.png';
-					index=true;
-				}
+				/notlike/.test(this.src)==true?this.src='images/like.png':this.src='images/notlike.png';
 			}
 		})(i);
 	}
 }
-window.onload=function(){
-	showDate();
-	showMusicList();
-	collHover();
-};
+
+// window.onload=function(){
+// 	showDate();
+// 	showMusicList();
+// 	collHover();
+// };
 
 
 window.onmessage = function (e) {
 	var getData=JSON.parse(e.data)
 	showMusicList(getData)
+	showDate();
+	collHover();
 }
 
 

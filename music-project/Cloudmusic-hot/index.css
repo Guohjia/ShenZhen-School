@@ -3,7 +3,7 @@
  a{text-decoration:none;}
  html,body{width: 100%;}
 #recommend{
-	width: 1000px;
+	width: 100%;
 	margin:0 auto;
 }
 #recommend>#hot_nav{}

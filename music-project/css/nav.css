@@ -1,6 +1,8 @@
         .nav{
              background: rgb(44, 44, 44);
              position: relative;
+             width: 100%;   
+             min-width: 755px;
              /* transition: opacity .5s linear */
         }
         .nav-svg{

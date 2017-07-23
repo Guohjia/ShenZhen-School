@@ -9,33 +9,55 @@
 		}
 
 *{padding:0;margin:0;}
+a{
+	text-decoration: none;
+}
 ul{list-style:none;}
 table{
 	border-collapse:collapse;
-	box-shadow:5px 5px 10px 1px red;
+	/* box-shadow:5px 5px 10px 1px red; */
 	width: 100%;
+	border:1px solid #8a8a8a;
+	box-shadow: 0 1px 4px 2px #8a8a8a
 }
 table td,table th{
 	padding:5px 10px;
 }
 table,table td,table th{
-	border:1px solid red;
+	/* border:1px solid red; */
 	text-align: center;
 }
 table caption{
-	height:30px;line-height:30px;
+	/* height:30px;line-height:30px; */
+	position: relative;
 	text-align:left;
-	padding-left:20px;color:white;
-	background-color:red;
+	font-size:20px;
+	padding:8px 10px;
+	border-bottom: 2px solid rgb(194, 12, 12);
 }
-table caption>a{
-	float:right;
-	margin-right:20px;
-	color:white;
+table th{
+	border:1px solid #8a8a8a;
+}
+table caption a{
+	position: absolute;
+	right: 0;
+	top:-1%;
+}
+.icon:hover{
+	transform: scale(1.2)
+}
+tbody tr:nth-of-type(odd){
+	background: rgb(241, 241, 241);
+}
+td a{
+	color:#8a8a8a;
+}
+td a:hover{
+	color:rgb(194, 12, 12);
 }
 #overlay{
 	position:absolute;
-	width:100%;height:100%;
+	width:100%;height:43%;
 	left:0;top:0;
 	display:none;
 	background:rgba(0,0,0,.5);
@@ -47,7 +69,6 @@ table caption>a{
 	position:absolute;
 	left:50%;top:50%;
 	transform:translateX(-50%) translateY(-50%) rotateY(-90deg);
-	background-image: url(../images/2.jpg);
 	opacity: 0.3;
 }
 #content .title{
@@ -55,7 +76,7 @@ table caption>a{
 	width:100%;height:60px;
 }
 #content .title>h1{
-	background-color:red;
+	background-color:rgb(194, 12, 12);
 	text-align:center;
 	color:white;height:100%;
 	line-height:60px;
@@ -64,7 +85,7 @@ table caption>a{
 	border:1px solid white;
 	position:absolute;
 	right:10px;top:50%;
-	color:white;width:36px;
+	width:36px;
 	height:36px;border-radius:18px;
 	font-size:25px;
 	line-height:36px;
@@ -72,12 +93,16 @@ table caption>a{
 	transform:translateY(-50%);
 	cursor:pointer;
 }
+#span3{
+	color:#000;
+}
 ul{margin-top:60px;}
 ul li{
 	padding-top:8px;padding-bottom:8px;}
 ul li:last-child{text-align:center;}
 #content label{
-	width:80px;display:inline-block;
+	width:60px;
+	display:inline-block;
 }
 #content input,#content select{
 	height:30px;text-indent:1em;width:200px;
@@ -86,8 +111,9 @@ ul li:last-child{text-align:center;}
 #content input.btn{
 	width:80px;
 	text-indent: 0;
-	background-color:red;
+	border-radius: 4px;
 	color:black;
+	cursor: pointer
 }
 #mmp{
 	width: 100%;
@@ -129,10 +155,4 @@ ul li:last-child{text-align:center;}
 		opacity:0;
 		transform:translateX(-50%) translateY(-50%) rotateY(-90deg);
 	}
-}
-input{
-	opacity: 0.5;
-}
-select{
-	opacity: 0.5
 }

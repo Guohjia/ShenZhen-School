@@ -1,12 +1,4 @@
-// var data=[
 
-// 			{id:'001',name:'Someone like you',type:'Davorak:symphony NO.9',singer:'Coke Jiang',Time:'03.66'},
-// 			{id:'002',name:'Someone like you',type:'Davorak:symphony NO.9',singer:'Coke Jiang',Time:'03.66'},
-// 			{id:'003',name:'Someone like you',type:'Davorak:symphony NO.9',singer:'Coke Jiang',Time:'03.66'},
-// 			{id:'004',name:'Someone like you',type:'Davorak:symphony NO.9',singer:'Coke Jiang',Time:'03.66'},
-// 			{id:'005',name:'Someone like you',type:'Davorak:symphony NO.9',singer:'Coke Jiang',Time:'03.66'},
-// 			{id:'006',name:'Someone like you',type:'Davorak:symphony NO.9',singer:'Coke Jiang',Time:'03.66'}
-//  ];
 function grid(config) {
 		//这里的config赋值有什么用？
 		grid.config = config;
@@ -56,10 +48,10 @@ window.onmessage = function (e) {
 	grid.createCaption = function () {
 		var caption = document.createElement('caption');
 		var captionHtml = '';
-		captionHtml += this.config.title;
+		captionHtml += '<span>'+this.config.title+'</span>';
 		//?==function干吗用的？
 		if (typeof this.config.addHandler == 'function')
-			captionHtml += '<a href="#" onclick="grid.showDialog();grid.change()">+</a>';
+			captionHtml += '<a href="#" onclick="grid.showDialog();grid.change()"><svg t="1500776662447" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2339" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="38"><defs><style type="text/css"></style></defs><path d="M513.669012 960.438359c-74.965365 0.013303-150.368706-18.692734-218.661091-57.143465-12.670577-7.131421-17.162892-23.190165-10.023285-35.860742 7.123234-12.670577 23.183002-17.169031 35.860743-10.023285 153.61975 86.47756 348.07658 59.735499 472.869794-65.098647 153.98814-153.990187 153.98814-404.533406 0-558.523593-153.990187-154.015769-404.554896-153.995303-558.537919 0-153.982 153.990187-153.982 404.533406 0 558.523593 10.284227 10.284227 10.284227 26.961048 0 37.245276-10.270924 10.284227-26.947745 10.284227-37.231973 0-174.517709-174.531012-174.517709-458.483132 0-633.009028 174.525895-174.517709 458.469829-174.531012 633.015168 0 174.517709 174.525895 174.517709 458.478016 0 633.009028-85.971024 85.967954-201.11139 130.880863-317.291437 130.880863z" p-id="2340" fill="#8a8a8a"></path><path d="M514.451842 745.726206c-14.543228 0-26.329668-11.794627-26.329669-26.329669V323.897901c0-14.535041 11.786441-26.329668 26.329669-26.329668 14.535041 0 26.329668 11.794627 26.329668 26.329668v395.498636c0 14.535041-11.794627 26.329668-26.329668 26.329669z" p-id="2341" fill="#8a8a8a"></path><path d="M712.198601 547.976376H316.708152c-14.543228 0-26.329668-11.794627-26.329669-26.329668s11.786441-26.329668 26.329669-26.329669h395.490449c14.535041 0 26.329668 11.794627 26.329669 26.329669 0 14.536065-11.792581 26.329668-26.329669 26.329668z" p-id="2342" fill="#8a8a8a"></path></svg></a>';
 		caption.innerHTML = captionHtml;
 
 		return caption;
@@ -70,7 +62,7 @@ window.onmessage = function (e) {
 		var newh1 = '';
 		//    var overlay=document.getElementsByTagName('div');
 		// overlay.id='overlay';
-		newh1 = '<div id="mmp"><h1>新增</h1><span id="span3" onclick="grid.closeDialog()">×</span></div>'
+		newh1 = '<div id="mmp"><h1>新增</h1><span id="span3" onclick="grid.closeDialog()"></span></div>'
 		contents.innerHTML += newh1;
 	}
 	grid.createTHead = function () {
@@ -207,7 +199,6 @@ window.onmessage = function (e) {
 		if (target.getAttribute('data-flag') == "1") {	//新增
 			this.config.addHandler(obj);
 			tag('tbody')[0].appendChild(this.createTr(obj));
-			alert('add successful...');
 		} else {										//修改
 			this.config.updateHandler(obj);
 			var tds = tag('td', this.curTr);
@@ -215,7 +206,6 @@ window.onmessage = function (e) {
 				if (fields[i].name != this.config.key)
 					tds[i].innerText = obj[fields[i].name];
 			}
-			alert('ok...');
 		}
 		this.closeDialog();
 	};
@@ -246,7 +236,7 @@ window.onmessage = function (e) {
 	}
 
 	grid({
-		title: 'Music List',//必须有
+		title: '歌曲列表',//必须有
 		data: data,			 //必须有
 		container: 'con',     //必须有
 		key: 'id',
@@ -263,7 +253,7 @@ window.onmessage = function (e) {
 				{ text: 'Classic', value: 'Classic' }]
 			},
 			{ name: "singer" },
-			{ name: 'time' },
+			// { name: 'time' },
 		]
 	});
 

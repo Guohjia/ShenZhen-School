@@ -3,12 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music</title>
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/carousel.css">
     <style>
+        @media screen and (min-width: 600px){
+            .iframe-ct{
+                width: 1000px;
+            }
+        }
+        @media screen and (max-width: 600px){
+            .iframe-ct{
+                width: 600px
+            }
+        }   
         body {
             margin: 0;
         }
@@ -36,12 +46,13 @@
             margin: 0 auto 20px;
         }
 
+        .iframe-ct{
+            margin:0 auto;
+        }
         iframe {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            min-width: 1000px;
+            width: 100%;
             min-height: 1045px;
+            margin:0 auto;
         }
     </style>
 </head>
@@ -118,10 +129,15 @@
             <li></li>
         </ul>
     </div>
-    <iframe src="./Cloudmusic-hot/index.html" frameborder="0" id='child'></iframe>
-    <script src="./scripts/jquery-3.2.0.min.js"></script>
+    <div class="iframe-ct">
+        <iframe src="./Cloudmusic-hot/index.html" frameborder="0" id='child'></iframe>
+    </div>
+    
+    
+    
+     <script src="./scripts/jquery-3.2.0.min.js"></script> <!--依赖模块，必须放在最前面 -->
     <script src="./scripts/carousel.js"></script>
-    <script src="./index.js"></script>  <!-- navFixed.js 与此脚本点击事件冲突 -->
+    <script src="./index.js"></script>  <!-- navFixed.js 与此脚本点击事件冲突,不可互换顺序-->
     <script src="./scripts/navFixed.js"></script>
 </body>
 

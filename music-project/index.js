@@ -34,7 +34,13 @@ var dataArray = {
     { id: '003', name: '花房姑娘', type: 'folk', singer: '崔健', Time: '04:49' },
     { id: '004', name: '和你在一起', type: 'folk', singer: '李志', Time: '03:51' },
     { id: '005', name: '这个年纪', type: 'folk', singer: '齐一', Time: '04:44' },
-    { id: '006', name: '走马', type: 'popular', singer: '陈粒', Time: '03:53' }]
+    { id: '006', name: '走马', type: 'popular', singer: '陈粒', Time: '03:53' },
+    { id: '007', name: '唱歌的孩子', type: 'popular', singer: '谣乐队', Time: '05:52' },
+    { id: '008', name: '春夏秋冬的你', type: 'popular', singer: '王宇良', Time: '04:56' },
+    { id: '009', name: '乱世巨星', type: 'folk', singer: '陈小春', Time: '04:25' },
+    { id: '010', name: '郭源潮', type: 'folk', singer: '宋冬野', Time: '05:00' },
+    { id: '011', name: '塔吉汗', type: 'folk', singer: '马条', Time: '04:58' },
+    { id: '012', name: '凄美地', type: 'popular', singer: '郭顶', Time: '04:10' }]
 }
 var navUl = document.querySelector('.nav-item')
 var navlis = document.querySelectorAll('.nav-item>li')
